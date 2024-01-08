@@ -1,23 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    int array[] = {5, 2, 4, 6, 1, 3};
-    int key, A[] = {};
-    int i = 0;
-    int j = 0;
+  int array[] = {5, 2, 4, 6, 1, 3};
+  int n = sizeof(array) / sizeof(array[0]);
 
-    for (i = 2; i < array[i]; i++) {
-        key = A[i];
-        j = i - 1;
-        while (j > 0 && A[j] > key) {
-            A[j+1] = A[j];
-            j = j - 1;
-        }
-        A[j+1] = key;
+  for (int i = 1; i < n; i++) {
+    int key = array[i];
+    int j = i - 1;
+    while (j >= 0 && array[j] > key) {
+      array[j + 1] = array[j];
+      j = j - 1;
     }
-    for (i = 0; i < array[i]; ++i) {
-        printf("%d", array[i]);
-    }
+    array[j + 1] = key;
+  }
+  for (int i = 0; i < n; i++) {
+    printf("%d ", array[i]);
+  }
 
-    return 0;
+  return 0;
 }
