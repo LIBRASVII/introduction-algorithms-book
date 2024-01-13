@@ -8,13 +8,20 @@ int main() {
 
   for (int i = 1; i < n; i++) {
     int key = array[i];
+    // On by one move the position to the right
+    // util it finds the proper position
     int j = i - 1;
     while (j >= 0 && array[j] > key) {
       array[j + 1] = array[j];
+      // On by one move the position to the right
+      // util it finds the proper position
       j = j - 1;
     }
+    // At this point
+    // it insert the value of A[i]
     array[j + 1] = key;
   }
+  // Print sorted array
   for (int i = 0; i < n; i++) {
     printf("%d ", array[i]);
   }
