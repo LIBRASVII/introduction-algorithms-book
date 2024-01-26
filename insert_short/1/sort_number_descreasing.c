@@ -9,18 +9,10 @@ int main() {
   for (int i = 1; i < n; i++) {
     // printf("\nA[] => %d\n", array[i]);
     int key = array[i]; // take each value from array
-    printf("\nkey => %d\n", key);
-    int j = i - 1; // take the value from the loop for
-    printf("\ni => %d\n", i);
-    printf("\nj => %d\n", j);
-    printf("\nA[j] => %d\n", array[j]);
+    int j = i - 1;      // take the value from the loop for
     while (j > 0 && array[j] < key) {
-      printf("inside while");
       array[j + 1] = array[j]; // move the value inside array
-      printf("\nWhile A[j] => %d\n", array[j]);
-      printf("\nwhile j => %d\n", j);
       j = j - 1;
-      printf("\nbelow while j => %d\n", j);
     }
     array[j + 1] = key;
   }
