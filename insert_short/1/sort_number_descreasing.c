@@ -10,8 +10,10 @@ int main() {
     // printf("\nA[] => %d\n", array[i]);
     int key = array[i]; // take each value from array
     int j = i - 1;      // take the value from the loop for
-    while (j > 0 && array[j] < key) {
-      array[j + 1] = array[j]; // move the value inside array
+    // Move elements of arr[0.. i-1]
+    // than are less tha key
+    while (j >= 0 && array[j] < key) {
+      array[j + 1] = array[j];
       j = j - 1;
     }
     array[j + 1] = key;
