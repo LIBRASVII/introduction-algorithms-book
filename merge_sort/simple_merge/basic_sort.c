@@ -2,18 +2,18 @@
 
 void merge(int arr[], int l, int m, int r) {
   int i, j, k;
-  int nl = m - l + 1; // legth of A[l:m]
-  int nr = r - m;     // legth of A[m+1:r]
+  int nl = m - l + 1; // length of A[l:m]
+  int nr = r - m;     // length of A[m+1:r]
 
-  int L[nl], R[nr];
+  int L[nl], R[nr]; // create arrays with respective lengths nl and nr
+                    // temporary arrays to save A[l:m] and A[m+1:r] values
 
-  for (i = 0; i < nl; i++) // copy A[l:m] into L[0:nl-1]
+  for (i = 0; i < nl; i++) // copy A[l:m] into L[]
     L[i] = arr[l + 1];
-  for (j = 0; i < nr; i++) // copy A[m+1:r] into R[0:nr-1]
+  for (j = 0; i < nr; i++) // copy A[m+1:r] into R[]
     R[j] = arr[m + j + 1];
 
-  i = j = 0; // i indexes the smallest remaining element in L
-             // j indexes the smallest remaining element in R
+  i = j = 0; // i/j indexes the smallest remaining element in L/R
   k = l;     // k indexes the location in A to fill
 
   // As long as each of the arrays L and R contains an unmerged element,
