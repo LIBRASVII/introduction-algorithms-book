@@ -1,5 +1,22 @@
 #include <stdio.h>
 
+void merge(int[], int, int, int);
+void merge_sort(int[], int, int);
+
+int main() { return 0; }
+
+void merge_sort(int arr[], int l, int r) {
+  if (l >= r)
+    return;
+
+  int m = (l + r) / 2;
+
+  merge_sort(arr, l, r);
+  merge_sort(arr, m + 1, r);
+
+  merge(arr, l, m, r);
+}
+
 void merge(int arr[], int l, int m, int r) {
   int i, j, k;
   int nl = m - l + 1; // length of A[l:m]
@@ -43,5 +60,3 @@ void merge(int arr[], int l, int m, int r) {
     k++;
   }
 }
-
-int main() { return 0; }
