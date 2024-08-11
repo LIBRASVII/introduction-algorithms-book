@@ -1,16 +1,23 @@
 #include <stdio.h>
 
-int main() {
+int fn_sum(int array[], int n) {
   int sum = 0;
+  int i = 1;
+
+  while (i <= n) {
+    sum = sum + array[i];
+    i = i + 1;
+  }
+  return sum;
+}
+
+int main() {
   int array[] = {1, 3, 7, 9};
   int n = sizeof(array) / sizeof(array[0]);
 
-  for (int i = 0; i < array[n]; i++) {
-    sum = sum + array[n];
-    return sum;
-  }
+  fn_sum(array, n);
 
-  for (int i = 0; i < array[n]; i++) {
+  for (int i = 1; i < array[n]; i++) {
     printf("%d ", array[i]);
   }
 

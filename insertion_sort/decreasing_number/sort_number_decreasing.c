@@ -7,7 +7,6 @@ int main() {
   int n = sizeof(array) / sizeof(array[0]);
 
   for (int i = 1; i < n; i++) {
-    // printf("\nA[] => %d\n", array[i]);
     int key = array[i]; // take each value from array
     int j = i - 1;      // take the value from the loop for
     // Move elements of arr[0.. i-1]
