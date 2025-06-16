@@ -6,7 +6,9 @@ int main() {
     o tamanho total do array pelo tamanho de um elemento.*/
   int n = sizeof(array) / sizeof(array[0]);
 
-  for (int i = 1; i < n; i++) {
+  for (int i = 0; i < n; i++) {
+    // Only the first number (5) don't change your position
+
     int key = array[i];
     // On by one move the position to the right
     // util it finds the proper position

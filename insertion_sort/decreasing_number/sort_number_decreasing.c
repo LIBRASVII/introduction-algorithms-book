@@ -1,12 +1,10 @@
-// Only the first number (5) don't change your position
-
 #include <stdio.h>
 
 int main() {
   int array[] = {5, 2, 4, 6, 1, 3};
   int n = sizeof(array) / sizeof(array[0]);
 
-  for (int i = 1; i < n; i++) {
+  for (int i = 0; i < n; i++) {
     int key = array[i]; // take each value from array
     int j = i - 1;      // take the value from the loop for
     // Move elements of arr[0.. i-1]
